@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+
+    </style>
+
+
+</head>
+<body>
+
+    <h3>Move card:</h3>
+
+    <form action = "/addcard/{{username['id']}}/{{list['listid']}}/{{card['cardid']}}/edit" method = "POST">
+        <label for="lists">Choose a list:</label>
+        <select name="lists" id="lists">
+            {% for list in lists %}
+            <h1>listid is : {{list['listid']}}</h1>
+          <option value="lists" >{{list['name']}}</option>
+          {% endfor %}
+        </select>
+        <br><br><br>
+        <div>
+        <label>Mark as complete: </label> 
+            <label class="switch">
+                <input type="checkbox" name="check" >
+              </label><br><br>
+        </div>
+        <input type="submit" value="Submit">
+      </form>
+    
+</body>
+</html>

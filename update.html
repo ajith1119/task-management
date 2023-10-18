@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+
+        <style>
+            h3, form {text-align: center;}
+
+        </style>
+    
+    </head>
+    <body>
+
+        <div>
+        <h1 style="Float:left"> Welcome {{username.nam}}</h1>
+        <h2 style="Float:right">
+            <a href="summary.html"> Summary</a>
+            <a href=""> |</a>
+            <a href="/logout"> LogOut</a>
+        </h2>
+        </div>
+
+        <div style="padding-top:200px"></div>
+        <h3>Edit the List</h3>
+        <form action = "/addlist/{{username['id']}}/{{list['listid']}}/edit" method = "POST">
+            <div>
+                <label>List Name:</label>
+                <input type="text" name="listname"/>
+            </div><br><br>
+        <input type = "submit" value = "Save" />
+        </form>
+
+
+    </body>
+</html>

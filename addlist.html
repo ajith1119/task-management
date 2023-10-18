@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            form {text-align: center;}
+            h3 {text-align: center;}
+        </style>
+</head>
+
+<body>
+      
+    <h1 style="Float:left"> Welcome {{username.nam}}</h1>
+    <h2 style="Float:right">
+        <a href="summary.html"> Summary</a>
+        <a href=""> |</a>
+        <a href="/logout"> LogOut</a>
+    </h2>
+
+
+
+        <div style="padding-top:200px"></div>
+        <h3>Add a List</h3>
+        <form action = "/addlist/{{username['id']}}" method = "POST">
+        Name<br><br>
+        <input type = "text" name = "top" /><br><br>
+        Description<br><br>
+        <textarea rows="5" cols="50" name="des">
+        </textarea><br><br>
+        <input type = "submit" value = "Save" />
+        </form>
+    
+</body>
+</html>
